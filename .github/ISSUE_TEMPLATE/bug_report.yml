@@ -54,7 +54,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: What version of AUX are you using?
-      placeholder: "e.g., v1.0.1"
+      label: What version of AUX are you using? You can find this in the version-info.txt file. [@latest](https://aux.tamu.edu/@latest/version-info.txt).
+      placeholder: "e.g., v1.0.1, @next, @major/v1.x"
     validations:
       required: true
