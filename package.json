@@ -1,11 +1,11 @@
 {
-  "name": "npm-test",
+  "name": "@mnicholstamu/npm-test",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@mnicholstamu/npm-test"
+  "repository": {
+    "url": "https://npm.pkg.github.com/@mnicholstamu/npm-test"
   }
 }
