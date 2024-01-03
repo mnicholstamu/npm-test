@@ -1,20 +1,23 @@
 name: AUX Package
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
 jobs:
-  publish-gpr:
-    runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 20
-        registry-url: https://npm.pkg.github.com/
-        scope: '@mnicholstamu'
-    - run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    aux-on-latest-release:
+        runs-on: ubuntu-latest
+        env:
+            GITHUB_TOKEN: ${{ github.token}}
+        
+        steps:
+            - name: Checkout Source
+              uses: actions/checkout@v3
+  
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 20
+                registry-url: https://npm.pkg.github.com/
+                scope: '@mnicholstamu'
